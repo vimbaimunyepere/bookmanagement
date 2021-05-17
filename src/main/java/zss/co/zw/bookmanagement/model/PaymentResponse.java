@@ -2,17 +2,17 @@ package zss.co.zw.bookmanagement.model;
 
 import java.util.Date;
 
-public class Response {
+public class PaymentResponse {
     public Date updated;
     public String responseCode;
     public String responseDescription;
     public String reference;
     public String debitReference;
 
-    public Response() {
+    public PaymentResponse() {
     }
 
-    public Response(Date updated, String responseCode, String responseDescription, String reference, String debitReference) {
+    public PaymentResponse(Date updated, String responseCode, String responseDescription, String reference, String debitReference) {
         this.updated = updated;
         this.responseCode = responseCode;
         this.responseDescription = responseDescription;

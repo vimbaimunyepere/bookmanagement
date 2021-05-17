@@ -2,7 +2,6 @@ package zss.co.zw.bookmanagement.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
-
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import zss.co.zw.bookmanagement.model.*;
@@ -15,6 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
 public class BookController {
 
     @Autowired
@@ -50,9 +50,9 @@ public class BookController {
         return bookRepository.findAllByCategoryId(category);
     }
 
-    @RequestMapping(value = "/template", method = RequestMethod.POST,consumes = "application/json",produces = "application/json" )
+    @RequestMapping(value = "/payment", method = RequestMethod.POST,consumes = "application/json",produces = "application/json" )
 
-    public Response  createPayment(@RequestBody Sales sales) {
+    public PaymentResponse  createPayment(@RequestBody Sales sales) {
 
         System.out.println();
 
@@ -74,8 +74,8 @@ public class BookController {
 
         System.out.println(sales.toString());
 
-        Response resp = restTemplate.exchange(
-                "https://secure.v.co.zw/interview/api/transaction", HttpMethod.POST, entity, Response.class).getBody();
+        PaymentResponse resp = restTemplate.exchange(
+                "https://secure.v.co.zw/interview/api/transaction", HttpMethod.POST, entity, PaymentResponse.class).getBody();
 
        //if Response.class.getre
 

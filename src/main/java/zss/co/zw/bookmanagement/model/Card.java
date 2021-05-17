@@ -1,10 +1,9 @@
 package zss.co.zw.bookmanagement.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
+
 
 public class Card implements Serializable {
 

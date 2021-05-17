@@ -1,13 +1,10 @@
 package zss.co.zw.bookmanagement.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import sun.text.normalizer.UCharacter;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.List;
+
 
 
 @Entity
